@@ -37,58 +37,146 @@ header a{
 header a:hover{
     text-decoration: underline;
 }
-.brand-container{
-    display: flex;
-}
-.brand-container img{
-    width: 50%;
-}
-.content-overlay{
-    width: 50%;
-    background-color:#ffeebf;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.content-overlay p{
-    color: #CBAE7A;
-    font-size: 30px;
-}
-.loc{
-    background-color: #f6f3eb;
-    color: #CBAE7A;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    line-height: 1.8em;
-}
-.location{
-    display: flex;
-}
-.location img{
-    width: 50%;
-}
-.infor{
-    width: 50%;
-    background-color:#e6e6e6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.infor a{
-    font-size: 40px;
-    margin-bottom: 30px;
-    text-decoration: none;
-    color: #f12727;
-}
-.infor a:hover{
-text-decoration: underline;
-}
+    .brand-container {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        max-width: 1200px;
+        margin: 80px auto;
+        gap: 60px; /* 圖片與文字間的呼吸空間 */
+        padding: 0 40px;
+        font-family: "Noto Sans TC", "PingFang TC", sans-serif;
+    }
+
+    /* 品牌形象圖：等比例縮放 */
+    .brand-container img {
+        flex: 1;
+        width: 50%; /* 確保圖片與文字區域等寬 */
+        height: auto;
+        border-radius: 4px; /* 微微的圓角增加親和力 */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* 輕微陰影增加層次感 */
+    }
+
+    /* 文字內容區 */
+    .content-overlay {
+        flex: 1;
+        text-align: left;
+    }
+
+    /* 英文副標題 (選配：可增加高級感) */
+    .content-overlay::before {
+        content: "BRAND PHILOSOPHY";
+        display: block;
+        font-size: 14px;
+        color: #A68D60; /* 琥珀金/香檳金色調 */
+        letter-spacing: 0.25em;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .content-overlay p {
+        font-size: 16px;
+        line-height: 2.2; /* 較高的行高讓閱讀更優雅 */
+        color: #444;
+        margin: 0;
+        letter-spacing: 0.08em;
+        font-weight: 300; /* 使用纖細字重 */
+    }
+
+    /* 強調段落：慢工細作 */
+    .highlight {
+        display: block;
+        margin-top: 25px;
+        color: #333;
+        font-weight: 500;
+        position: relative;
+        padding-top: 25px;
+    }
+
+    /* 強調段落上方的裝飾細線 */
+    .highlight::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 1.5px;
+        background-color: #A68D60;
+    }
+/* 核心容器：地圖與資訊 1:1 平分 */
+    .location {
+        display: flex;
+        align-items: center; /* 垂直置中 */
+        justify-content: center;
+        max-width: 1100px;
+        margin: 80px auto;
+        gap: 80px; /* 寬闊的間距展現高級感 */
+        padding: 0 40px;
+        font-family: "Noto Sans TC", sans-serif;
+    }
+
+    /* 左側地圖圖片 */
+    .location img {
+        flex: 1;
+        width: 50%;
+        height: auto;
+        border-radius: 4px; /* 輕微圓角 */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* 柔和陰影 */
+    }
+
+    /* 右側資訊區：垂直堆疊內容 */
+    .infor {
+        flex: 1;
+        text-align: left;
+    }
+
+    /* 「服務據點」標題：放在地址上方 */
+    .loc-title {
+        font-size: 30px;
+        color: #A68D60; /* 琥珀金/質感金 */
+        letter-spacing: 0.3em;
+        font-weight: 500;
+        margin-bottom: 15px;
+        display: block;
+        text-transform: uppercase;
+    }
+
+    /* 地址連結樣式 */
+    .infor h2 {
+        margin: 0 0 30px 0;
+        line-height: 1.6;
+    }
+
+    .infor a.address-link {
+        text-decoration: none;
+        color: #4A6741; /* 品牌深綠色 */
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: color 0.3s;
+    }
+
+    .infor a.address-link:hover {
+        color: #A68D60;
+    }
+
+    /* 圓角按鈕 */
+    .map-btn {
+        display: inline-block;
+        padding: 12px 60px;
+        border: 1px solid #4A6741;
+        border-radius: 50px;
+        color: #4A6741;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.15em;
+        transition: all 0.3s;
+    }
+
+    .map-btn:hover {
+        background-color: #4A6741;
+        color: #fff;
+    }
 footer{
     background-color: #111111;
     color: #8b8985;

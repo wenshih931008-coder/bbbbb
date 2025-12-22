@@ -39,76 +39,248 @@ header a:hover{
 }
 
 
-.光影手作糖工坊{
-    display: flex;
+:root {
+    --brand-green: #4A6741;
+    --text-color: #333333;
 }
-.光影手作糖工坊 img{
-    width: 50%;
-}
-.文1{
-    width: 50%;
-    background-color:#e6e6e6;
+
+/* 核心容器調整 */
+.光影手作糖工坊 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* 讓內容從頂部對齊，更像網頁排版 */
     justify-content: center;
-}
-.文1 h2{
- font-size: 40px;
-    margin-bottom: 30px;   
-}
-.文1 p{
-    text-align: center;
-    line-height: 2em;
+    max-width: 1200px; /* 稍微拉寬，讓 1:1 比例更美觀 */
+    margin: 50px auto;
+    gap: 80px; /* 增加間距，營造高級感 */
+    padding: 20px;
 }
 
+/* 圖片容器：設定為佔據 50% 的空間 */
+.光影手作糖工坊 img {
+    flex: 1; /* 平分空間 */
+    width: 50%; /* 強制與文字等寬 */
+    max-width: 50%;
+    height: auto;
+    object-fit: cover; /* 確保圖片比例不變形 */
+    border-radius: 4px;
+}
 
-.果香口味診斷室{
-  display: flex;  
-}
-.果香口味診斷室 img{
-    width: 50%;
+/* 右側文字區塊：設定為佔據 50% 的空間 */
+.標1 {
+    flex: 1; /* 平分空間 */
+    padding-top: 10px; /* 微調讓標題與圖片頂端對齊 */
 }
 
-.文2{
-    width: 50%;
-    background-color:#e6e6e6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* 標題與內文樣式優化 */
+h2 {
+    font-size: 28px;
+    color: var(--brand-green);
+    margin: 0 0 40px 0;
+    letter-spacing: 0.15em;
+    font-weight: 600;
 }
-    
-.文2 h2{font-size: 40px;
+
+.文1 {
     margin-bottom: 30px;
 }
-.文2 p{
-  text-align: center;
-  line-height: 2em; 
+
+.文1 p {
+    font-size: 15.5px;
+    line-height: 2; /* 增加行高，與參考圖一致 */
+    margin: 0;
+    color: var(--text-color);
+    letter-spacing: 0.08em; /* 稍微拉開字距，更優雅 */
 }
 
-  .光之密語{
-    display: flex;
+/* 強調重點 */
+.文1 p span {
+    font-weight: 600;
+    color: #4A6741;
 }
-  .光之密語 img{
-    width: 50%;
+
+/* 按鈕樣式 (膠囊型) */
+.btn-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 70px; /* 較寬的按鈕看起來更專業 */
+    border: 1px solid var(--brand-green);
+    border-radius: 50px;
+    color: var(--brand-green);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
 }
-  .文3{
-     width: 50%;
-    background-color:#e6e6e6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+.btn-more:hover {
+    background-color: var(--brand-green);
+    color: white;
 }
-  .文3 h2{
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-  .文3 p{
-    text-align: center;
-    line-height: 2em;
-}
+
+/* 核心佈局：確保圖文 1:1 分佈 */
+    .果香口味診斷室 {
+        display: flex;
+        align-items: flex-start; 
+        justify-content: center;
+        max-width: 1200px;
+        margin: 60px auto;
+        gap: 80px; 
+        padding: 20px;
+        font-family: "Noto Sans TC", sans-serif;
+    }
+
+    /* 圖片設定：保持比例 */
+    .果香口味診斷室 img {
+        flex: 1;
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+
+    /* 右側文字區塊 */
+    .標2 {
+        flex: 1;
+        text-align: left;
+    }
+
+    /* 標題設定 */
+    .標2 h2 {
+        font-size: 32px;
+        color: #4A6741;
+        margin: 0 0 40px 0;
+        letter-spacing: 0.15em;
+        font-weight: 600;
+    }
+
+    /* 段落間距優化 */
+    .文2 {
+        margin-bottom: 35px;
+    }
+
+    .文2 p {
+        font-size: 15.5px;
+        line-height: 2.1;
+        margin: 0;
+        color: #333;
+        letter-spacing: 0.08em;
+        font-weight: 300;
+    }
+
+    /* 強調色彩與系列名稱 */
+    .文2 span {
+        font-weight: 600;
+        color: #4A6741;
+    }
+
+    /* 強調測驗與情感 */
+    .highlight-box {
+        color: #8A7352; /* 使用琥珀色系的點綴色 */
+        font-weight: 500;
+    }
+
+    /* 品牌圓角按鈕 */
+    .btn-diagnosis {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 65px;
+        border: 1px solid #4A6741;
+        border-radius: 50px;
+        color: #4A6741;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        transition: 0.3s;
+    }
+
+    .btn-diagnosis:hover {
+        background-color: #4A6741;
+        color: white;
+    }
+
+/* 核心佈局：確保圖片與文字 1:1 */
+    .光之密語 {
+        display: flex;
+        align-items: flex-start; 
+        justify-content: center;
+        max-width: 1200px;
+        margin: 60px auto;
+        gap: 80px; /* 寬闊的間距營造高級感 */
+        padding: 20px;
+        font-family: "Noto Sans TC", sans-serif;
+    }
+
+    /* 圖片設定：保持與右側等大 */
+    .光之密語 img {
+        flex: 1;
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+
+    /* 右側文字區塊 */
+    .標3 {
+        flex: 1;
+        text-align: left;
+    }
+
+    /* 標題設定：深綠色系與大字距 */
+    .標3 h2 {
+        font-size: 32px;
+        color: #4A6741;
+        margin: 0 0 40px 0;
+        letter-spacing: 0.15em;
+        font-weight: 600;
+    }
+
+    /* 段落美化 */
+    .文3 {
+        margin-bottom: 35px;
+    }
+
+    .文3 p {
+        font-size: 16px;
+        line-height: 2.1; /* 高行高提升閱讀層次感 */
+        margin: 0;
+        color: #333;
+        letter-spacing: 0.08em;
+    }
+
+    /* 強調關鍵詞 */
+    .文3 span {
+        font-weight: 600;
+        color: #4A6741;
+    }
+
+    /* 補充說明文字（例如詩句）*/
+    .quote {
+        font-size: 14px;
+        color: #888;
+        font-style: italic;
+        margin-top: 8px;
+        border-left: 2px solid #E0E0E0;
+        padding-left: 15px;
+    }
+
+    /* 品牌圓角按鈕 */
+    .btn-ar {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 65px;
+        border: 1px solid #4A6741;
+        border-radius: 50px;
+        color: #4A6741;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        transition: 0.3s;
+    }
+
+    .btn-ar:hover {
+        background-color: #4A6741;
+        color: white;
+    }
 footer{
     background-color: #111111;
     color: #8b8985;
